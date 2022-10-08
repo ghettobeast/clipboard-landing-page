@@ -1,0 +1,326 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --Strong-Cyan: hsl(171, 66%, 44%);
+  --Light-Blue: hsl(233, 100%, 69%);
+
+  --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+  --Grayish-blue: hsl(201, 11%, 66%);
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+* > .big-pictures {
+  width: 100%;
+  padding: 3rem 0;
+}
+
+main {
+  background: url(./images/bg-header-desktop.png) no-repeat;
+  background-size: cover;
+  min-height: 70vh;
+  padding-top: 5rem;
+}
+
+main,
+section,
+footer {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.section-title,
+.tool-section > .tool-article-container,
+footer > .flex-footer-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+main > *,
+.bottom-text {
+  padding-bottom: 2rem;
+}
+
+main > .main-logo {
+  width: 6rem;
+}
+main .section-title > .text-title {
+  font-size: 2rem;
+}
+
+.section-title > .text-title {
+  font-weight: 600;
+  font-size: 1.7rem;
+  padding-bottom: 1rem;
+}
+
+.section-title > .text-title-content,
+.title-container > .article__content {
+  max-width: 520px;
+  line-height: 1.5;
+  color: var(--Grayish-blue);
+  font-size: 18px;
+}
+.main-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.main-button > * {
+  border: 0;
+  border-radius: 30px;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  width: 100%;
+}
+
+.ios--btn {
+  background: var(--Strong-Cyan);
+}
+
+.mac--btn {
+  background: var(--Light-Blue);
+}
+
+.first-section-container article > *,
+.title-container > .article__content {
+  padding: 1.5rem;
+  line-height: 1.5;
+}
+
+aside > .description-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+aside > .description-text {
+  color: var(--Grayish-blue);
+}
+
+.tool-section article > img,
+footer .footer-logo {
+  width: 50px;
+}
+
+.title-container > .article__title {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.company-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.company-logo > img {
+  max-width: 9em;
+}
+
+footer {
+  min-height: 20vh;
+  gap: 2rem;
+  padding: 2rem;
+}
+footer > .flex-footer-container {
+  gap: 2rem;
+}
+
+footer > .social-media-container {
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+@media all and (width > 800px) {
+  .main-button {
+    width: 50%;
+  }
+  * > .big-pictures {
+    max-width: 40em;
+  }
+
+  .first-section-container {
+    display: flex;
+  }
+
+  .first-section-container > img {
+    margin-left: -100px;
+    object-fit: contain;
+    object-position: left;
+  }
+  .first-section-container > article {
+    padding: 5rem;
+  }
+  .first-section-container > article > aside {
+    width: 70%;
+  }
+
+  .tool-section > .tool-article-container,
+  .main-button,
+  .company-logo {
+    flex-direction: row;
+  }
+
+  footer {
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  footer > .flex-footer-container {
+    max-width: 400px;
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+}
